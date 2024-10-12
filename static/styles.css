@@ -20,6 +20,7 @@ body {
   border-radius: 15px;
   width: 90%;
   max-width: 500px;
+  padding-right: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
 }
@@ -48,7 +49,7 @@ p strong {
 
 input[type="file"] {
   margin-bottom: 20px;
-  margin-right: 30px;
+  margin-right: 40px;
 
 }
 
