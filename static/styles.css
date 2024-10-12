@@ -7,10 +7,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   box-sizing: border-box;
-  margin-top: 70px; /* Ajout d'une marge en haut */
-
 }
 
 .container {
@@ -20,9 +18,9 @@ body {
   border-radius: 15px;
   width: 90%;
   max-width: 500px;
-  padding-right: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
+  margin-top: 20px; /* Ajout d'une marge en haut */
 }
 
 h1 {
@@ -47,22 +45,21 @@ p strong {
   color: #FF00FF; /* Texte en gras avec couleur magenta fluo */
 }
 
-input[type="file"] {
-  margin-bottom: 20px;
-  margin-right: 40px;
-
-}
-
+input[type="file"],
 input {
   margin: 10px 0;
-  margin-right: 30px;
   padding: 12px;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure grise translucide */
-  width: 100%;
+  width: calc(100% - 20px); /* Ajustement de la largeur avec la marge */
   background-color: #1e1e1e;
   color: #00FFCC;
   font-size: 16px;
+  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
 }
 
 input:focus {
