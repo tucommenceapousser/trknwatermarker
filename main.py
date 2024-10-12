@@ -1,4 +1,4 @@
-import zipfile  # Import correct depuis la bibliothèque Python standard
+import zipfile
 from flask import Flask, render_template, request, send_file
 from PIL import Image, ImageDraw, ImageFont
 import os
@@ -51,17 +51,21 @@ def index():
             add_watermark(input_image_path, output_image_path, text, 'Arial.ttf', font_size, opacity, color_tuple, spacing, angle)
             output_images.append(output_image_path)
 
-        # Créer un fichier ZIP pour les images
-        zip_buffer = io.BytesIO()
-        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
-            for file_path in output_images:
-                zip_file.write(file_path, os.path.basename(file_path))
-        
-        zip_buffer.seek(0)
+        if len(output_images) == 1:
+            # Si une seule image, la renvoyer directement
+            return send_file(output_images[0], as_attachment=True)
 
-        return send_file(zip_buffer, as_attachment=True, download_name='watermarked_images.zip', mimetype='application/zip')
+        else:
+            # Si plusieurs images, créer un ZIP
+            zip_buffer = io.BytesIO()
+            with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+                for file_path in output_images:
+                    zip_file.write(file_path, os.path.basename(file_path))
+            
+            zip_buffer.seek(0)
+            return send_file(zip_buffer, as_attachment=True, download_name='watermarked_images.zip', mimetype='application/zip')
 
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=False,  host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
