@@ -1,6 +1,6 @@
 {
-    "name": "custxss",
-    "short_name": "custxss",
+    "name": "trknwatermark",
+    "short_name": "watmark",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
