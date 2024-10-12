@@ -56,15 +56,15 @@
 <body>
     <div class="container">
         <h1>Ajoutez un Filigrane à Votre Image</h1>
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="input_image" accept="image/*" required>
-            <input type="text" name="text" placeholder="Texte du filigrane (ex: trhacknon)">
-            <input type="number" name="font_size" placeholder="Taille du texte (ex: 20)">
-            <input type="number" name="opacity" placeholder="Opacité (0-255)">
-            <input type="text" name="color" placeholder="Couleur (ex: 255,0,0)">
-            <input type="number" name="spacing" placeholder="Espacement (ex: 30)">
-            <input type="number" name="angle" placeholder="Angle (ex: 45)">
-            <button type="submit">Créer le Filigrane</button>
-        </form>
+        <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="input_images" multiple>
+    <input type="text" name="text" placeholder="Watermark Text" value="trhacknon">
+    <input type="number" name="font_size" placeholder="Font Size" value="20">
+    <input type="number" name="opacity" placeholder="Opacity" value="75">
+    <input type="text" name="color" placeholder="Color (R,G,B)" value="255,0,0">
+    <input type="number" name="spacing" placeholder="Spacing" value="30">
+    <input type="number" name="angle" placeholder="Angle" value="45">
+    <button type="submit">Apply Watermark</button>
+</form>
     </div>
 </body>
