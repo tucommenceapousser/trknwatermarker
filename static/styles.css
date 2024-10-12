@@ -15,12 +15,13 @@ body {
   text-align: center;
   background-color: #1a1a1a;
   padding: 30px;
+  padding-top: 70px;
   border-radius: 15px;
   width: 90%;
   max-width: 500px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
-  margin-top: 70px; /* Ajout d'une marge en haut */
+  margin-top: 30px; /* Ajout d'une marge en haut */
 }
 
 h1 {
