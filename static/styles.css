@@ -1,12 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #121212;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -14,16 +16,32 @@ body {
   background-color: #1a1a1a;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2);
   width: 90%;
   max-width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
 }
 
 h1 {
-  font-size: 24px;
-  color: #00FFCC; /* Touche fluo pour le titre */
+  font-size: 26px;
+  color: #00FFCC; /* Titre en cyan fluo */
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.5); /* Fine bordure sous le titre */
+  padding-bottom: 10px;
+}
+
+p {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Fine bordure verticale grise */
+  padding-left: 10px;
+}
+
+p strong {
+  color: #FF00FF; /* Texte en gras avec couleur magenta fluo */
 }
 
 input[type="file"] {
@@ -34,7 +52,7 @@ input {
   margin: 10px 0;
   padding: 12px;
   border-radius: 5px;
-  border: 1px solid #444;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure grise translucide */
   width: 100%;
   background-color: #1e1e1e;
   color: #00FFCC;
@@ -48,28 +66,51 @@ input:focus {
 }
 
 button {
-  background-color: #00FFCC;
-  color: #121212;
+  background-color: #1a1a1a;
+  color: #00FFCC;
   padding: 12px 25px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure translucide */
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #00e6b8;
+  background-color: #333333;
+  color: #FF33CC; /* Changement vers magenta fluo au hover */
+  box-shadow: 0 0 15px rgba(255, 51, 204, 0.6); /* Ombre fluo au hover */
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
 ::placeholder {
-  color: #999;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustements pour les petites résolutions et l'affichage mobile */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  .container {
+    padding: 15px;
+  }
 }
 
 /* Ajout de transitions pour un effet plus fluide */
