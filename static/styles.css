@@ -8,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  padding-top: 70px;
   box-sizing: border-box;
 }
 
@@ -15,7 +16,6 @@ body {
   text-align: center;
   background-color: #1a1a1a;
   padding: 30px;
-  padding-top: 70px;
   border-radius: 15px;
   width: 90%;
   max-width: 500px;
