@@ -2,9 +2,56 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watermark Creator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- SEO Meta -->
+<!-- SEO Meta -->
+<meta name="keywords" content="watermark, filigrane, image, trhacknon, outil en ligne, gratuit, protection d'images">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000"> <!-- Couleur de la barre de navigation sur mobile -->
+
+<!-- Optimisation mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Apple-specific meta tags -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Favicon pour différents appareils -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<!-- Meta de base -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="trhacknon">
+<meta name="description" content="Ajoutez facilement un filigrane à vos images avec trknwatermarker, l'outil web flexible et simple.">
+
+<!-- Meta pour Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://trknwatermarker.onrender.com">
+<meta property="og:image" content="{{ url_for('static', filename='prev.png') }}">
+<meta property="og:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Facile à utiliser et totalement gratuit.">
+<meta property="og:site_name" content="trknwatermarker">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:updated_time" content="2024-10-12T12:00:00+00:00">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
+<meta name="twitter:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Outil simple et gratuit.">
+<meta name="twitter:image" content="{{ url_for('static', filename='prev.png') }}">
+<meta name="twitter:site" content="@trhacknon">
+<meta name="twitter:creator" content="@trhacknon">
+
+<!-- Google+ (obsolète mais parfois utile pour le SEO) -->
+<meta itemprop="name" content="trknwatermarker">
+<meta itemprop="description" content="Ajoutez un filigrane à vos images. Outil en ligne simple et gratuit.">
+<meta itemprop="image" content="{{ url_for('static', filename='prev.png') }}">
 </head>
 <body>
     <div class="container">
