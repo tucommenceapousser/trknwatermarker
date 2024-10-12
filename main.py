@@ -1,13 +1,13 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, zipfile
 from PIL import Image, ImageDraw, ImageFont
 import os
+import io
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 def add_watermark(input_image_path, output_image_path, text, font_path, font_size, opacity, color, spacing, angle):
-    # Ouvre l'image
     image = Image.open(input_image_path).convert("RGBA")
     txt_layer = Image.new("RGBA", image.size, (255, 255, 255, 0))
     font = ImageFont.truetype(font_path, font_size)
@@ -31,7 +31,7 @@ def add_watermark(input_image_path, output_image_path, text, font_path, font_siz
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        input_image = request.files['input_image']
+        input_images = request.files.getlist('input_images')
         text = request.form.get('text', 'trhacknon')
         font_size = int(request.form.get('font_size', 20))
         opacity = int(request.form.get('opacity', 75))
@@ -39,17 +39,26 @@ def index():
         spacing = int(request.form.get('spacing', 30))
         angle = int(request.form.get('angle', 45))
 
-        # Save the uploaded image
-        input_image_path = os.path.join(app.config['UPLOAD_FOLDER'], input_image.filename)
-        input_image.save(input_image_path)
-
-        # Convert the color string to a tuple of integers
         color_tuple = tuple(map(int, color.split(',')))
+        output_images = []
 
-        output_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'watermarked_' + input_image.filename)
-        add_watermark(input_image_path, output_image_path, text, 'Arial.ttf', font_size, opacity, color_tuple, spacing, angle)
+        for input_image in input_images:
+            input_image_path = os.path.join(app.config['UPLOAD_FOLDER'], input_image.filename)
+            input_image.save(input_image_path)
 
-        return send_file(output_image_path, as_attachment=True)
+            output_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'watermarked_' + input_image.filename)
+            add_watermark(input_image_path, output_image_path, text, 'Arial.ttf', font_size, opacity, color_tuple, spacing, angle)
+            output_images.append(output_image_path)
+
+        # Créer un fichier ZIP pour les images
+        zip_buffer = io.BytesIO()
+        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+            for file_path in output_images:
+                zip_file.write(file_path, os.path.basename(file_path))
+        
+        zip_buffer.seek(0)
+
+        return send_file(zip_buffer, as_attachment=True, download_name='watermarked_images.zip', mimetype='application/zip')
 
     return render_template('index.html')
 
