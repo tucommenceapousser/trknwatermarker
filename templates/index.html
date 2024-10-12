@@ -2,69 +2,102 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Watermark Creator</title>
+    <title>trknwatermarker - Ajoutez un Filigrane à Vos Images</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
     <!-- SEO Meta -->
-<!-- SEO Meta -->
-<meta name="keywords" content="watermark, filigrane, image, trhacknon, outil en ligne, gratuit, protection d'images">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#000000"> <!-- Couleur de la barre de navigation sur mobile -->
+    <meta name="keywords" content="watermark, filigrane, image, trhacknon, outil en ligne, gratuit, protection d'images">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
 
-<!-- Optimisation mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Optimisation mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!-- Apple-specific meta tags -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Apple-specific meta tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Favicon pour différents appareils -->
-<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
-<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
-<link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
 
+    <!-- Meta de base -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="trhacknon">
+    <meta name="description" content="Ajoutez facilement un filigrane à vos images avec trknwatermarker, l'outil web flexible et simple.">
 
-<!-- Meta de base -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="author" content="trhacknon">
-<meta name="description" content="Ajoutez facilement un filigrane à vos images avec trknwatermarker, l'outil web flexible et simple.">
+    <!-- Meta pour Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trknwatermarker.onrender.com">
+    <meta property="og:image" content="{{ url_for('static', filename='prev.png') }}">
+    <meta property="og:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Facile à utiliser et totalement gratuit.">
+    <meta property="og:site_name" content="trknwatermarker">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:updated_time" content="2024-10-12T12:00:00+00:00">
 
-<!-- Meta pour Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://trknwatermarker.onrender.com">
-<meta property="og:image" content="{{ url_for('static', filename='prev.png') }}">
-<meta property="og:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Facile à utiliser et totalement gratuit.">
-<meta property="og:site_name" content="trknwatermarker">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:updated_time" content="2024-10-12T12:00:00+00:00">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
+    <meta name="twitter:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Outil simple et gratuit.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='prev.png') }}">
+    <meta name="twitter:site" content="@trhacknon">
+    <meta name="twitter:creator" content="@trhacknon">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="trknwatermarker - Ajoutez un filigrane à vos images">
-<meta name="twitter:description" content="Personnalisez vos filigranes en ligne avec trknwatermarker. Outil simple et gratuit.">
-<meta name="twitter:image" content="{{ url_for('static', filename='prev.png') }}">
-<meta name="twitter:site" content="@trhacknon">
-<meta name="twitter:creator" content="@trhacknon">
-
-<!-- Google+ (obsolète mais parfois utile pour le SEO) -->
-<meta itemprop="name" content="trknwatermarker">
-<meta itemprop="description" content="Ajoutez un filigrane à vos images. Outil en ligne simple et gratuit.">
-<meta itemprop="image" content="{{ url_for('static', filename='prev.png') }}">
+    <!-- Google+ -->
+    <meta itemprop="name" content="trknwatermarker">
+    <meta itemprop="description" content="Ajoutez un filigrane à vos images. Outil en ligne simple et gratuit.">
+    <meta itemprop="image" content="{{ url_for('static', filename='prev.png') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Ajoutez un Filigrane à Votre Image</h1>
+        <h1>Ajoutez un Filigrane à Vos Images</h1>
+        <p>
+            Bienvenue sur <strong>trknwatermarker</strong>, un outil en ligne qui vous permet d'ajouter un filigrane à une ou plusieurs images.
+        </p>
+        <p>
+            <strong>Modes disponibles :</strong><br>
+            - Si vous téléchargez une seule image, vous recevrez directement l'image avec le filigrane.<br>
+            - Si vous téléchargez plusieurs images, celles-ci seront compressées dans un fichier ZIP.
+        </p>
+        <p>
+            <strong>Formats d'images acceptés :</strong> JPG, PNG, GIF, BMP
+        </p>
+
         <form method="POST" enctype="multipart/form-data">
-    <input type="file" name="input_images" multiple>
-    <input type="text" name="text" placeholder="Watermark Text" value="trhacknon">
-    <input type="number" name="font_size" placeholder="Font Size" value="20">
-    <input type="number" name="opacity" placeholder="Opacity" value="75">
-    <input type="text" name="color" placeholder="Color (R,G,B)" value="255,0,0">
-    <input type="number" name="spacing" placeholder="Spacing" value="30">
-    <input type="number" name="angle" placeholder="Angle" value="45">
-    <button type="submit">Apply Watermark</button>
-</form>
+            <div class="form-group">
+                <label for="input_images">Sélectionnez une ou plusieurs images :</label>
+                <input type="file" id="input_images" name="input_images" accept=".jpg,.jpeg,.png,.gif,.bmp" multiple required>
+            </div>
+            <div class="form-group">
+                <label for="text">Texte du filigrane :</label>
+                <input type="text" id="text" name="text" placeholder="Texte du filigrane" value="trhacknon">
+            </div>
+            <div class="form-group">
+                <label for="font_size">Taille de la police :</label>
+                <input type="number" id="font_size" name="font_size" placeholder="Taille de la police" value="20">
+            </div>
+            <div class="form-group">
+                <label for="opacity">Opacité (0-100) :</label>
+                <input type="number" id="opacity" name="opacity" placeholder="Opacité" value="75" min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label for="color">Couleur (R,G,B) :</label>
+                <input type="text" id="color" name="color" placeholder="255,0,0" value="255,0,0">
+            </div>
+            <div class="form-group">
+                <label for="spacing">Espacement :</label>
+                <input type="number" id="spacing" name="spacing" placeholder="Espacement" value="30">
+            </div>
+            <div class="form-group">
+                <label for="angle">Angle de rotation (en degrés) :</label>
+                <input type="number" id="angle" name="angle" placeholder="Angle" value="45">
+            </div>
+            <button type="submit">Appliquer le Filigrane</button>
+        </form>
     </div>
 </body>
+</html>
