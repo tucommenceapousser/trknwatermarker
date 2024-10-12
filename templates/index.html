@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermark Creator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajoutez un Filigrane à Votre Image</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="input_image" accept="image/*" required>
+            <input type="text" name="text" placeholder="Texte du filigrane (ex: trhacknon)">
+            <input type="number" name="font_size" placeholder="Taille du texte (ex: 20)">
+            <input type="number" name="opacity" placeholder="Opacité (0-255)">
+            <input type="text" name="color" placeholder="Couleur (ex: 255,0,0)">
+            <input type="number" name="spacing" placeholder="Espacement (ex: 30)">
+            <input type="number" name="angle" placeholder="Angle (ex: 45)">
+            <button type="submit">Créer le Filigrane</button>
+        </form>
+    </div>
+</body>
