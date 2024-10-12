@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, send_file, zipfile
+import zipfile  # Import correct depuis la bibliothèque Python standard
+from flask import Flask, render_template, request, send_file
 from PIL import Image, ImageDraw, ImageFont
 import os
 import io
