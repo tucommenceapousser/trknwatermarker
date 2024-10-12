@@ -20,7 +20,7 @@ body {
   max-width: 500px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
-  margin-top: 20px; /* Ajout d'une marge en haut */
+  margin-top: 70px; /* Ajout d'une marge en haut */
 }
 
 h1 {
