@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #121212;
   color: #fff;
   display: flex;
@@ -11,29 +11,68 @@ body {
 
 .container {
   text-align: center;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2);
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #00FFCC; /* Touche fluo pour le titre */
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
 }
 
 input {
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: 1px solid #444;
-  width: 80%;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #00FFCC;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #00FFCC;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
+  background-color: #00FFCC;
+  color: #121212;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #00e6b8;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+}
+
+::placeholder {
+  color: #999;
+}
+
+/* Ajout de transitions pour un effet plus fluide */
+input, button {
+  transition: all 0.3s ease;
 }
