@@ -39,6 +39,16 @@ h1 {
   animation: glow 2s ease-in-out infinite alternate;
 }
 
+h2 {
+  font-size: 24px;
+  color: #FF00FF; /* Cyan fluo */
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); /* Effet cyan et magenta */
+  border-bottom: 1px solid rgba(255, 0, 255, 0.5);
+  padding-bottom: 10px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
 @keyframes glow {
   from {
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6);
