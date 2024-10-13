@@ -5,13 +5,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Pour permettre à la page de s'adapter */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-top: 90px;
+  padding-bottom: 80px; /* Ajout d'un padding en bas pour l'espace */
 }
-
 
 .container {
   text-align: center;
@@ -22,7 +21,7 @@ body {
   max-width: 500px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
-  margin-top: 10px; /* Ajout d'une marge en haut */
+  margin-top: 10px;
 }
 
 h1 {
@@ -102,6 +101,7 @@ button:focus {
   body {
     flex-direction: column;
     padding: 20px;
+    padding-bottom: 100px; /* Ajustement du padding bas pour mobile */
   }
 
   h1 {
@@ -112,7 +112,8 @@ button:focus {
     font-size: 14px;
     padding-left: 8px;
   }
-    .container {
+
+  .container {
     padding: 15px;
     margin-top: 80px;
   }
