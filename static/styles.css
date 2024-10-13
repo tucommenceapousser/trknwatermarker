@@ -18,8 +18,10 @@ body {
   background-color: #1a1a1a;
   padding: 30px;
   border-radius: 15px;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
+  heigth: 80%;
+  max-height: 90vh;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
   margin-top: 20px; /* Ajout d'une marge en haut */
