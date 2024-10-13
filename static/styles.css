@@ -11,7 +11,7 @@ body {
   padding: 0;
   padding-top: 90px;
   margin-top: 90px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   box-sizing: order-box;
 }
 
@@ -118,7 +118,7 @@ button:focus {
 
   .container {
     padding: 15px;
-    margin-top: 30px; /* Plus de marge en haut pour mobile */
+    margin-top: 20px; /* Plus de marge en haut pour mobile */
   }
 }
 
