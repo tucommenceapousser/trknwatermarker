@@ -6,11 +6,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  max-height: 90%;
   margin: 0;
   padding: 0;
-  padding-top: 90px;
-  margin-top: 90px;
+  padding-top: 80px;
+  margin-top: \0px;
   box-sizing: order-box;
 }
 
@@ -118,7 +117,7 @@ button:focus {
 
   .container {
     padding: 15px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     margin-top: 40px; /* Plus de marge en haut pour mobile */
   }
 }
