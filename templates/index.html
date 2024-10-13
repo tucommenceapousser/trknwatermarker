@@ -101,6 +101,13 @@
             <button type="submit">Appliquer le Filigrane</button>
         </form>
     </div>
+      <script>
+        const thunderSounds = [
+            "{{ url_for('static', filename='loud-thunder-192165.mp3') }}",
+            "{{ url_for('static', filename='thunder.mp3') }}",
+            "{{ url_for('static', filename='rain-and-thunder-sfx-12820.mp3') }}"
+        ];
+    </script>
     <script src="{{ url_for('static', filename='thunder.js') }}"></script>
 </body>
 </html>
