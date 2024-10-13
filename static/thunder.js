@@ -1,9 +1,4 @@
 // Tableau des sons disponibles
-const thunderSounds = [
-    "{{ url_for('static', filename='loud-thunder-192165.mp3') }}",
-    "{{ url_for('static', filename='thunder.mp3') }}",
-    "{{ url_for('static', filename='rain-and-thunder-sfx-12820.mp3') }}"
-];
 
 // Fonction pour jouer un son d'orage aléatoire après un délai aléatoire
 function playThunderSound() {
