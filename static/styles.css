@@ -8,7 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  padding-top: 70px;
+  padding-top: 80px;
   margin-top: 80px;
   box-sizing: order-box;
 }
@@ -23,6 +23,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
   margin-top: 30px; /* Ajout d'une marge en haut */
+  box-sizing: order-box;
 }
 
 h1 {
