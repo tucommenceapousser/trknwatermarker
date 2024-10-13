@@ -1,6 +1,19 @@
-// Fonction pour jouer le son d'orage après un délai aléatoire
+// Tableau des sons disponibles
+const thunderSounds = [
+  '/static/loud-thunder-192165.mp3',
+  '/static/thunder.mp3',
+  '/static/rain-and-thunder-sfx-12820.mp3'
+];
+
+// Fonction pour jouer un son d'orage aléatoire après un délai aléatoire
 function playThunderSound() {
   const thunderSound = document.getElementById('thunder-sound');
+
+  // Sélectionne un son aléatoirement
+  const randomSound = thunderSounds[Math.floor(Math.random() * thunderSounds.length)];
+
+  // Change la source de l'élément audio
+  thunderSound.src = randomSound;
 
   // Réduire le volume à 50%
   thunderSound.volume = 0.5;
