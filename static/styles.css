@@ -103,7 +103,7 @@ button:focus {
   body {
     flex-direction: column;
     padding: 20px;
-    margin-bottom: 60px;
+    padding-bottom: 50px;
   }
 
   h1 {
