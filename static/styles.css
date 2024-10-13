@@ -46,7 +46,7 @@ h2 {
   text-shadow: 0 0 6px rgba(255, 0, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); /* Effet cyan et magenta */
   border-bottom: 1px solid rgba(255, 0, 255, 0.5);
   padding-bottom: 10px;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: gloww 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -55,6 +55,15 @@ h2 {
   }
   to {
     text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6); /* Effet changement de couleur */
+  }
+}
+
+@keyframes gloww {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6); /* Effet changement de couleur */
+  }
+  to {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6);
   }
 }
 
