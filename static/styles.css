@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  padding-bottom: 80px; /* Ajout d'un padding en bas pour l'espace */
+  padding-bottom: 40px; /* Ajout d'un padding en bas pour l'espace */
 }
 
 .container {
@@ -101,7 +101,7 @@ button:focus {
   body {
     flex-direction: column;
     padding: 20px;
-    padding-bottom: 100px; /* Ajustement du padding bas pour mobile */
+    padding-bottom: 40px; /* Ajustement du padding bas pour mobile */
   }
 
   h1 {
@@ -115,7 +115,7 @@ button:focus {
 
   .container {
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
