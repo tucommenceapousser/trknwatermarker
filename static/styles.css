@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin-top: 80px;
   padding-top: 80px;
-  box-sizing: order-box;
+  box-sizing: border-box;
 }
 
 .container {
