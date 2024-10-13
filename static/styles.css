@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  padding-bottom: 40px; /* Ajout d'un padding en bas pour l'espace */
+  padding-bottom: 20px; /* Ajout d'un padding en bas pour l'espace */
 }
 
 .container {
@@ -71,7 +71,7 @@ input:focus {
 
 button {
   background-color: #1a1a1a;
-  color: #00FFCC;
+  color: #FF00FF;
   padding: 12px 25px;
   border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure translucide */
   border-radius: 5px;
@@ -101,7 +101,7 @@ button:focus {
   body {
     flex-direction: column;
     padding: 20px;
-    padding-bottom: 40px; /* Ajustement du padding bas pour mobile */
+    padding-bottom: 20px; /* Ajustement du padding bas pour mobile */
   }
 
   h1 {
@@ -115,7 +115,7 @@ button:focus {
 
   .container {
     padding: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
