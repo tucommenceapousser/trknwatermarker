@@ -115,6 +115,11 @@ button:focus {
     font-size: 14px;
     padding-left: 8px;
   }
+    .container {
+    padding: 15px;
+    margin-top: 40px; /* Plus de marge en haut pour mobile */
+    margin-bottom: 40px;
+  }
 }
 
 /* Ajout de transitions pour un effet plus fluide */
