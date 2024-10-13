@@ -20,17 +20,32 @@ body {
   width: 90%;
   max-width: 500px;
   border: 1px solid rgba(255, 255, 255, 0.1); /* Fine bordure blanche translucide */
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2); /* Ombres cyan subtiles */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(255, 0, 255, 0.3); /* Cyan et Magenta subtils */
+  transition: all 0.4s ease-in-out;
   margin-top: 10px;
+}
+
+.container:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 0, 0.5), 0 0 80px rgba(0, 255, 255, 0.5); /* Jaune et Cyan lumineux au hover */
 }
 
 h1 {
   font-size: 26px;
-  color: #00FFCC; /* Titre en cyan fluo */
+  color: #00FFCC; /* Cyan fluo */
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(0, 255, 255, 0.5); /* Fine bordure sous le titre */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6); /* Effet cyan et magenta */
+  border-bottom: 1px solid rgba(0, 255, 255, 0.5);
   padding-bottom: 10px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6); /* Effet changement de couleur */
+  }
 }
 
 p {
@@ -38,12 +53,18 @@ p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
-  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Fine bordure verticale grise */
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
   padding-left: 10px;
+  transition: border-left-color 0.3s ease;
+}
+
+p:hover {
+  border-left-color: #FF33CC; /* Bordure fluo magenta au hover */
 }
 
 p strong {
-  color: #FF00FF; /* Texte en gras avec couleur magenta fluo */
+  color: #FF00FF;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.8), 0 0 10px rgba(255, 255, 0, 0.5); /* Effet magenta et jaune */
 }
 
 input[type="file"],
@@ -51,57 +72,54 @@ input {
   margin: 10px 0;
   padding: 12px;
   border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure grise translucide */
-  width: calc(100% - 20px); /* Ajustement de la largeur avec la marge */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: calc(100% - 20px);
   background-color: #1e1e1e;
   color: #00FFCC;
   font-size: 16px;
-  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
-}
-
-input[type="file"] {
-  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: box-shadow 0.4s ease;
 }
 
 input:focus {
   border-color: #00FFCC;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 25px rgba(255, 0, 255, 0.6); /* Cyan et Magenta */
 }
 
 button {
   background-color: #1a1a1a;
   color: #FF00FF;
   padding: 12px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Fine bordure translucide */
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3); /* Ombre fluo */
 }
 
 button:hover {
   background-color: #333333;
-  color: #FF33CC; /* Changement vers magenta fluo au hover */
-  box-shadow: 0 0 15px rgba(255, 51, 204, 0.6); /* Ombre fluo au hover */
+  color: #FF33CC;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.6), 0 0 25px rgba(0, 255, 255, 0.5); /* Effet lumineux jaune et cyan */
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.7), 0 0 25px rgba(0, 255, 0, 0.7); /* Effet focus jaune et vert */
 }
 
 ::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Ajustements pour les petites résolutions et l'affichage mobile */
 @media (max-width: 600px) {
   body {
     flex-direction: column;
     padding: 20px;
-    padding-bottom: 20px; /* Ajustement du padding bas pour mobile */
+    padding-bottom: 20px;
   }
 
   h1 {
@@ -119,7 +137,6 @@ button:focus {
   }
 }
 
-/* Ajout de transitions pour un effet plus fluide */
 input, button {
   transition: all 0.3s ease;
 }
