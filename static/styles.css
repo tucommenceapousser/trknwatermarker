@@ -114,7 +114,7 @@ button:focus {
   }
     .container {
     padding: 15px;
-    margin-top: 40px; /* Plus de marge en haut pour mobile */
+    margin-top: 70px; /* Plus de marge en haut pour mobile */
   }
 }
 
