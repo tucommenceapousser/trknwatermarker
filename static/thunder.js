@@ -1,8 +1,8 @@
 // Tableau des sons disponibles
 const thunderSounds = [
-  '/static/loud-thunder-192165.mp3',
-  '/static/thunder.mp3',
-  '/static/rain-and-thunder-sfx-12820.mp3'
+  '/loud-thunder-192165.mp3',
+  '/thunder.mp3',
+  '/rain-and-thunder-sfx-12820.mp3'
 ];
 
 // Fonction pour jouer un son d'orage aléatoire après un délai aléatoire
