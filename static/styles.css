@@ -116,6 +116,7 @@ button:focus {
     .container {
     padding: 15px;
     margin-top: 80px;
+    margin-bottom: 60px;
   }
 }
 
